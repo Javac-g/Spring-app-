@@ -136,6 +136,7 @@ public class Services {
         }
         if (Index != -1){
             database.remove(Index);
+            log("deleted",database.get(Index));
             return Index;
         }
 
