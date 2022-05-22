@@ -3,6 +3,7 @@ package com.Maks.Controller;
 public class Tool {
 
     String front;
+
     String back;
 
     public String getFront() {
