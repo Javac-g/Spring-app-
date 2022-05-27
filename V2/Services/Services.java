@@ -95,5 +95,18 @@ public class Services {
     }
 
 
+    public ResponseDTO read(Integer id){
 
+        for (ResponseDTO search : database){
+
+            if (search.getId().equals(id)){
+
+                log("searched",search);
+
+                return search;
+            }
+
+        }
+        return null;
+    }
 }//EOF
