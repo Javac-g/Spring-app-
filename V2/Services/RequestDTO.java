@@ -1,5 +1,6 @@
 package com.Maks.V2.Services;
 
+import com.Maks.V2.Controller.Pet;
 import com.Maks.V2.Controller.Tool;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ public class RequestDTO {
     String name ;
     Integer id ;
     Tool tool;
-    List<PetEnum> petlist = new ArrayList<>();
+    List<Pet> petlist = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -35,11 +36,11 @@ public class RequestDTO {
         this.tool = tool;
     }
 
-    public List<PetEnum> getPetlist() {
+    public List<Pet> getPetlist() {
         return petlist;
     }
 
-    public void setPetlist(List<PetEnum> petlist) {
+    public void setPetlist(List<Pet> petlist) {
         this.petlist = petlist;
     }
 }

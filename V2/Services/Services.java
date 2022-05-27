@@ -1,5 +1,6 @@
 package com.Maks.V2.Services;
 
+import com.Maks.V2.Controller.Pet;
 import com.Maks.V2.Controller.ResponseDTO;
 
 import java.io.*;
@@ -46,8 +47,30 @@ public class Services {
 
     public ResponseDTO E(RequestDTO request, ResponseDTO response){
 
-        for (Pet pet:)
+        for (Pet pet:request.getPetlist()){
 
+            switch (pet.getValue()){
 
+                case"fast":
+
+                    response.setPetEnum(PetEnum.HORSE);
+
+                    break;
+
+                case"guard":
+
+                    response.setPetEnum(PetEnum.DOG);
+
+                    break;
+
+                case"sneak":
+
+                    response.setPetEnum(PetEnum.SNAKE);
+
+                    break;
+            }
+        }
+
+        return response;
     }
 }
