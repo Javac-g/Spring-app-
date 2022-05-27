@@ -15,4 +15,11 @@ public class Services {
         return msg;
 
     }
+
+    public ResponseDTO log(String filename, ResponseDTO user){
+
+        byte[] data = ("").getBytes();
+
+
+    }
 }
