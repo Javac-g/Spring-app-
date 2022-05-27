@@ -4,7 +4,7 @@ import com.Maks.V2.Services.RequestDTO;
 import com.Maks.V2.Services.Services;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
+@RequestMapping("/www")
 public class ControlleR {
 
     private Services services;
