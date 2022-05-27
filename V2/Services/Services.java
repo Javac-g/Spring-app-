@@ -74,7 +74,25 @@ public class Services {
         return response;
     }
 
-    public
+    public ResponseDTO create(RequestDTO requestDTO){
+
+        ResponseDTO user = new ResponseDTO();
+
+        user.setName(requestDTO.getName());
+
+        user.setId(requestDTO.getId());
+
+        user.setTool(requestDTO.getTool());
+
+        E(requestDTO , user);
+
+        log("created" , user);
+
+        database.add(user);
+
+        return user;
+
+    }
 
 
 
