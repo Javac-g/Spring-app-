@@ -17,7 +17,7 @@ public class Services {
 
     }
 
-    public ResponseDTO log(String filename, ResponseDTO user){
+    public void log(String filename, ResponseDTO user){
 
         byte[] data = ("\nName: " + user.getName() + "\nId: " + user.getId()).getBytes();
 
@@ -40,6 +40,13 @@ public class Services {
             e.printStackTrace();
 
         }
+
+
+    }
+
+    public ResponseDTO E(RequestDTO request, ResponseDTO response){
+
+        for (Pet pet:)
 
 
     }
