@@ -129,4 +129,22 @@ public class Services {
         }
         return null;
     }
+    public Integer delete(Integer id){
+        int remove = -1;
+
+        for (int i = 0; i < database.size(); i++){
+
+            if (database.get(i).getId().equals(id)){
+                remove = i;
+                log("removed",database.get(remove));
+
+            }
+        }
+        if (remove != -1){
+
+            database.remove(remove);
+            return remove;
+        }
+        return null;
+    }
 }//EOF
