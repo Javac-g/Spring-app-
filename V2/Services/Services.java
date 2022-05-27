@@ -109,4 +109,24 @@ public class Services {
         }
         return null;
     }
+
+    public ResponseDTO update(Integer id, RequestDTO json){
+        ResponseDTO newUser = read(id);
+
+        if (newUser != null){
+
+            newUser.setName(json.getName());
+
+            newUser.setId(json.getId());
+
+            newUser.setTool(json.getTool());
+
+            E(json,newUser);
+
+            log("updated",newUser);
+
+            return newUser;
+        }
+        return null;
+    }
 }//EOF
