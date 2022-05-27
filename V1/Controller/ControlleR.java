@@ -1,7 +1,7 @@
-package com.Maks.Controller;
+package com.Maks.V1.Controller;
 
-import com.Maks.Service.RequestDTO;
-import com.Maks.Service.Services;
+import com.Maks.V1.Service.RequestDTO;
+import com.Maks.V1.Service.Services;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

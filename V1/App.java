@@ -1,4 +1,4 @@
-package com.Maks;
+package com.Maks.V1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

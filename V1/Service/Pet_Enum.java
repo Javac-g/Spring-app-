@@ -1,4 +1,4 @@
-package com.Maks.Service;
+package com.Maks.V1.Service;
 
 public enum Pet_Enum {
     LION,

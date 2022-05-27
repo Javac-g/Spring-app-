@@ -1,4 +1,4 @@
-package com.Maks.Controller;
+package com.Maks.V1.Controller;
 
 public class Tool {
 

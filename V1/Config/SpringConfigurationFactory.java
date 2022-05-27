@@ -1,7 +1,7 @@
-package com.Maks.Config;
+package com.Maks.V1.Config;
 
-import com.Maks.Controller.ControlleR;
-import com.Maks.Service.Services;
+import com.Maks.V1.Controller.ControlleR;
+import com.Maks.V1.Service.Services;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

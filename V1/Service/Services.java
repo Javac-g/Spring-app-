@@ -1,8 +1,7 @@
-package com.Maks.Service;
+package com.Maks.V1.Service;
 
-import com.Maks.Controller.Pet;
-import com.Maks.Controller.ResponseDTO;
-import com.fasterxml.jackson.core.io.DataOutputAsStream;
+import com.Maks.V1.Controller.Pet;
+import com.Maks.V1.Controller.ResponseDTO;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;

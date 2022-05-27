@@ -1,16 +1,16 @@
-package com.Maks.Controller;
+package com.Maks.V1.Service;
 
-import com.Maks.Service.Pet_Enum;
+import com.Maks.V1.Controller.Pet;
+import com.Maks.V1.Controller.Tool;
 
-public class ResponseDTO {
+import java.util.ArrayList;
+import java.util.List;
 
+public class RequestDTO {
     String name;
-
     Integer id;
-
     Tool skill;
-
-    Pet_Enum pet;
+    List<Pet> petlist = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -36,11 +36,11 @@ public class ResponseDTO {
         this.skill = skill;
     }
 
-    public Pet_Enum getPet() {
-        return pet;
+    public List<Pet> getPetlist() {
+        return petlist;
     }
 
-    public void setPet(Pet_Enum pet) {
-        this.pet = pet;
+    public void setPetlist(List<Pet> petlist) {
+        this.petlist = petlist;
     }
 }
