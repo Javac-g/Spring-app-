@@ -2,6 +2,7 @@ package com.Maks.V2.Services;
 
 import com.Maks.V2.Controller.ResponseDTO;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,27 @@ public class Services {
 
     public ResponseDTO log(String filename, ResponseDTO user){
 
-        byte[] data = ("").getBytes();
+        byte[] data = ("\nName: " + user.getName() + "\nId: " + user.getId()).getBytes();
+
+        ByteArrayOutputStream b = new ByteArrayOutputStream();
+
+        try(FileOutputStream f = new FileOutputStream(filename + ".txt",true);
+
+            DataOutputStream d = new DataOutputStream( new FileOutputStream(filename + ".dat" ,true))
+
+        ){
+
+            b.write(data);
+
+            b.writeTo(f);
+
+            d.writeUTF("\nName: " + user.getName() + "\nId: " + user.getId());
+
+        }catch (IOException e){
+
+            e.printStackTrace();
+
+        }
 
 
     }
