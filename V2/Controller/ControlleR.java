@@ -30,7 +30,8 @@ public class ControlleR {
         return services.read(id);
 
     }
-
+    @PutMapping(value = "/u",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
     public ResponseDTO update(@RequestParam Integer id, @RequestBody RequestDTO requestDTO){
 
         return services.update(id,requestDTO);
