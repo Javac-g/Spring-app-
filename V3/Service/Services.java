@@ -92,4 +92,18 @@ public class Services {
 
     }
 
+    public ResponseDTO read(Integer id){
+
+        for (ResponseDTO search : datalist){
+            if(search.getId().equals(id)){
+                log("Search_3",search);
+                return search;
+            }
+        }
+        return null;
+
+
+
+    }
+
 }//EOF
