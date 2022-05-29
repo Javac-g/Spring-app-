@@ -1,5 +1,6 @@
 package com.Maks.V3.Service;
 
+import com.Maks.V3.Controller.Car;
 import com.Maks.V3.Controller.ResponseDTO;
 
 import java.io.ByteArrayOutputStream;
@@ -46,7 +47,32 @@ public class Services {
     }
 
     public ResponseDTO E(RequestDTO request, ResponseDTO response){
-        for (Car car : re)
+
+        for (Car car : request.getCarlist()){
+
+            switch (car.getValue()){
+
+                case "P":
+
+                    response.setCarEnum(Car_Enum.PORSHE);
+
+                    break;
+
+                case "F":
+
+                    response.setCarEnum(Car_Enum.FERRARI);
+
+                    break;
+
+                case "A":
+
+                    response.setCarEnum(Car_Enum.AUDI);
+
+                    break;
+
+            }
+        }
+        return response;
     }
 
 }//EOF
