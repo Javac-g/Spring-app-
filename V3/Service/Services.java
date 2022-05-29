@@ -105,5 +105,19 @@ public class Services {
 
 
     }
+    public ResponseDTO update(Integer id, RequestDTO upData){
+        ResponseDTO user = read(id);
+
+        if(user != null){
+            user.setName(upData.getName());
+            user.setId(upData.getId());
+            user.setTool(upData.getTool());
+            E(upData,user);
+            log("Updated_3",user);
+            return user;
+        }
+        return null;
+
+    }
 
 }//EOF
