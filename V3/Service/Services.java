@@ -120,4 +120,18 @@ public class Services {
 
     }
 
+    public Integer delete(Integer id){
+        int c = -1;
+        for (int i = 0; i < datalist.size(); i++){
+            if (datalist.get(i).getId().equals(id)){
+                c = i;
+                log("Deleted_3",datalist.get(c));
+            }
+        }
+        if (c != -1){
+            datalist.remove(c);
+            return c;
+        }
+        return null;
+    }
 }//EOF
