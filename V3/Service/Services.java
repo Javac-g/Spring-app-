@@ -75,4 +75,21 @@ public class Services {
         return response;
     }
 
+    public ResponseDTO create(RequestDTO data){
+
+        ResponseDTO user = new ResponseDTO();
+
+        user.setName(data.getName());
+        user.setId(data.getId());
+        user.setTool(data.getTool());
+
+        E(data,user);
+
+        log("Create_3",user);
+
+        datalist.add(user);
+        return user;
+
+    }
+
 }//EOF
