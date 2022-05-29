@@ -8,13 +8,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SpringConfigurationFactory {
-    @Bean
-    Services servicesBEAN(){
+   @Bean
+   public Services servicesBEAN(){
 
         return  new Services();
-
-    }
-    @Bean
+   }
+    @Bean 
     public ControlleR controlleRBEAN(){
 
         return new ControlleR(servicesBEAN());

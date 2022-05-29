@@ -17,7 +17,7 @@ public class ControlleR {
 
     @PostMapping(value = "/a",produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseDTO add(@RequestParam RequestDTO requestDTO){
+    public ResponseDTO add(@RequestBody RequestDTO requestDTO){
 
         return services.create(requestDTO);
 
