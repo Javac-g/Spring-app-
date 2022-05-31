@@ -2,7 +2,7 @@ package com.Maks.V4.Controller;
 
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScans
+@ComponentScan
 public class Tool {
 
 }
