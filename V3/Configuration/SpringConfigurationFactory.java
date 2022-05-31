@@ -9,15 +9,15 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class SpringConfigurationFactory {
 
-    @Bean
-    @Scope("prototype")
+    @Bean(name = "Service")
+    @Scope(value = "prototype")
     Services servicesB(){
 
         return new Services();
 
     }
-    @Bean
-    @Scope("prototype")
+    @Bean(name = "Controller")
+    @Scope(value = "prototype")
     ControllEr controllErB(){
 
         return  new ControllEr(servicesB());
