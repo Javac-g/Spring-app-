@@ -40,6 +40,12 @@ public class ControllER {
         return services.update(id,json);
 
     }
+    @DeleteMapping(value = "/d",produces = MediaType.APPLICATION_JSON_VALUE)
+    public String delete(@RequestParam Integer id){
+
+        return services.print("Was deleted person № - ") + services.delete(id);
+
+    }
 
 
 
