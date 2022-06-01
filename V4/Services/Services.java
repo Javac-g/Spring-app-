@@ -2,11 +2,14 @@ package com.Maks.V4.Services;
 
 import com.Maks.V4.Controller.Car;
 import com.Maks.V4.Controller.ResponseDTO;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Service
 public class Services {
     List<ResponseDTO> datalist = new ArrayList<>();
 
