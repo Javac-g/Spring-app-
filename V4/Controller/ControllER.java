@@ -34,6 +34,12 @@ public class ControllER {
         return services.read(id);
 
     }
+    @PutMapping(value = "/u",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseDTO updateData(@RequestParam Integer id, @RequestBody RequestDTO json){
+
+        return services.update(id,json);
+
+    }
 
 
 
