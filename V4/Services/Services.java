@@ -91,5 +91,19 @@ public class Services {
         }
         return null;
     }
+    public ResponseDTO update(Integer id,RequestDTO updateJSON){
+        ResponseDTO user = read(id);
+
+        if (user != null){
+            user.setName(updateJSON.getName());
+            user.setId(updateJSON.getId());
+            user.setTool(updateJSON.getTool());
+            setEnum(user,updateJSON);
+            log("update_",user);
+            return user;
+        }
+        return null;
+
+    }
 
 } //EOF
