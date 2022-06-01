@@ -58,6 +58,24 @@ public class Services {
 
 
     }
+    public ResponseDTO create(RequestDTO json){
+
+        ResponseDTO newUser = new ResponseDTO();
+
+        newUser.setName(json.getName());
+
+        newUser.setId(json.getId());
+
+        newUser.setTool(json.getTool());
+
+        setEnum(newUser,json);
+
+        log("create_4",newUser);
+
+        datalist.add(newUser);
+
+        return newUser;
+    }
 
 
 
