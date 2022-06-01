@@ -4,10 +4,7 @@ import com.Maks.V4.Services.RequestDTO;
 import com.Maks.V4.Services.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/www")
@@ -30,6 +27,14 @@ public class ControllER {
         return services.create(json);
 
     }
+
+    @GetMapping(value = "/f",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseDTO findData(@RequestParam Integer id){
+
+        return services.read(id);
+
+    }
+
 
 
 
