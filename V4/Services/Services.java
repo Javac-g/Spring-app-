@@ -1,5 +1,6 @@
 package com.Maks.V4.Services;
 
+import com.Maks.V4.Controller.Car;
 import com.Maks.V4.Controller.ResponseDTO;
 
 import java.io.*;
@@ -34,6 +35,27 @@ public class Services {
             e.printStackTrace();
 
         }
+
+    }
+
+    public ResponseDTO setEnum(ResponseDTO response, RequestDTO request){
+
+        for (Car X : request.getCarlist()){
+
+            switch (X.getValue()){
+                case "B":
+                    response.setCarEnum(CarEnum.BMW);
+                    break;
+                case "A":
+                    response.setCarEnum(CarEnum.AUDI);
+                    break;
+                case "P":
+                    response.setCarEnum(CarEnum.PORSHE);
+                    break;
+            }
+        }
+        return response;
+
 
     }
 
