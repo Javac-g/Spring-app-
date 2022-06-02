@@ -50,4 +50,22 @@ public class Services {
         return response;
 
     }
+    public ResponseDTO create(RequestDTO json){
+        ResponseDTO user = new ResponseDTO();
+
+        user.setName(json.getName());
+
+        user.setId(json.getId());
+
+        user.setTool(json.getTool());
+
+        Enum(json,user);
+
+        log("C",user);
+
+        datalist.add(user);
+
+        return user;
+
+    }
 }
