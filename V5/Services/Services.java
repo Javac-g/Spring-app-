@@ -78,4 +78,18 @@ public class Services {
         }
         return null;
     }
+
+    public ResponseDTO update(Integer id, RequestDTO user){
+        ResponseDTO NUSER = read(id);
+
+        if (NUSER != null){
+            NUSER.setName(user.getName());
+            NUSER.setId(user.getId());
+            NUSER.setTool(user.getTool());
+            Enum(user,NUSER);
+            log("U",NUSER);
+            return NUSER;
+        }
+        return null;
+    }
 }
