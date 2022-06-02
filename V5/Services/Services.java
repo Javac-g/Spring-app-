@@ -1,5 +1,6 @@
 package com.Maks.V5.Services;
 
+import com.Maks.V5.Controller.Car;
 import com.Maks.V5.Controller.ResponseDTO;
 
 import java.io.ByteArrayOutputStream;
@@ -29,5 +30,24 @@ public class Services {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public ResponseDTO Enum(RequestDTO request,ResponseDTO response){
+
+        for (Car car:request.getCarlist()){
+            switch (car.getValue()){
+                case"L":
+                    response.setCarEnum(CarEnum.LANOS);
+                    break;
+                case"T":
+                    response.setCarEnum(CarEnum.THANOS);
+                    break;
+                case"A":
+                    response.setCarEnum(CarEnum.ANANOS);
+                    break;
+            }
+        }
+        return response;
+
     }
 }
