@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/www")
 public class ControllER {
 
-
+    @Autowired
     public Services services;
 
     public Services getServices() {
