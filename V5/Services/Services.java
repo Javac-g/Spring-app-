@@ -2,6 +2,7 @@ package com.Maks.V5.Services;
 
 import com.Maks.V5.Controller.Car;
 import com.Maks.V5.Controller.ResponseDTO;
+import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -9,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Services {
     List<ResponseDTO> datalist = new ArrayList<>();
